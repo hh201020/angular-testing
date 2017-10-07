@@ -1,0 +1,20 @@
+<nav class="sidebar" [ngClass]="{sidebarPushRight: isActive}">
+    <ul class="list-group">
+        <a [routerLink]=" ['./home'] " [routerLinkActive]="['router-link-active']" class="list-group-item">
+          <i class="fa fa-fw fa-home icon-color" title="Home"></i>
+        </a>
+        <a [routerLink]=" ['./upload'] " [routerLinkActive]="['router-link-active']" class="list-group-item">
+          <i class="fa fa-fw fa-cloud-upload icon-color" title="Upload Video File"></i>
+        </a>
+        <a [routerLink]=" ['./videos/myvideos'] " [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-video-camera icon-color" title="Show Video List"></i>
+        </a>
+        <a [routerLink]="['./cmsevents']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+          <i class="fa fa-fw fa-commenting icon-color" title="Advice"></i>
+        </a>
+        <a [routerLink]="['./about']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+          <i class="fa fa-fw fa-bell icon-color" title="About"></i>
+        </a>
+
+    </ul>
+</nav>

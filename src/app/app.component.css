@@ -1,8 +1,26 @@
-html, body{
-  height: 100%;
-  font-family: Arial, Helvetica, sans-serif
+.main-container{
+  margin-top: 60px;
+  margin-left: 60px;
+  padding: 15px;
+  -ms-overflow-x: hidden;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  position: relative;
+  overflow: hidden;
 }
 
-a.active {
-  background-color: gray;
+.main-footer{
+position: absolute;
+right: 0;
+bottom: 0;
+left: 0;
+padding: 0rem;
+background-color: #efefef;
+text-align: right;
+}
+
+@media screen and (max-width: 992px) {
+  .main-container {
+      margin-left: 0px !important;
+  }
 }

@@ -1,3 +1,5 @@
+import './vendor.ts';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
@@ -29,10 +31,14 @@ import { AppState, InternalStateType } from './app.service';
 import { HomeComponent } from './home';
 import { AboutComponent } from './about';
 import { NoContentComponent } from './no-content';
+import { HeaderComponent  } from './header';
+import { SidebarComponent } from './sidebar';
 import { XLargeDirective } from './home/x-large';
 
 import '../styles/styles.scss';
 import '../styles/headings.css';
+import '../styles/_responsive.scss';
+import '../styles/_rtl.scss';
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -56,6 +62,8 @@ type StoreType = {
     AboutComponent,
     HomeComponent,
     NoContentComponent,
+    HeaderComponent,
+    SidebarComponent,
     XLargeDirective
   ],
   /**
@@ -68,7 +76,7 @@ type StoreType = {
     HttpModule,
     RouterModule.forRoot(ROUTES, {
       useHash: Boolean(history.pushState) === false,
-      preloadingStrategy: PreloadAllModules
+      // preloadingStrategy: PreloadAllModules
     })
   ],
   /**

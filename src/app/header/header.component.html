@@ -1,0 +1,59 @@
+<div class="pos-f-t fixed-top header">
+  <nav class="navbar navbar-inverse bg-inverse navbar-toggleable-md">
+    <button class="navbar-toggler navbar-toggler-right" (click)="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <a class="navbar-brand" href="javascript:void(0)" [routerLink]=" ['./upload'] " routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+      <i class="fa fa-fw fa-film"></i><span> Video CMS </span>
+    </a>
+
+    <div class="collapse navbar-collapse">
+
+      <ul class="navbar-nav">
+        <li>
+          <a href="javascript:void(0)" class="nav-link" href="{{homeUrl}}">
+            <h6>HomePage</h6>
+          </a>
+        </li>
+      </ul>
+
+      <!-- <form class="form-inline">
+        <input class="form-control" type="text" placeholder="Search">
+      </form> -->
+
+      <ul class="navbar-nav ml-auto mt-2 mt-md-0">
+        <li>
+          <a href="javascript:void(0)" class="nav-link" [routerLink]=" ['./upload'] " routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+            <i class="fa fa-fw fa-cloud-upload"></i>
+            <span> Upload </span>
+          </a>
+        </li>
+
+        <li>
+          <a href="javascript:void(0)" class="nav-link" [routerLink]=" ['./videos/myvideos'] " routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+            <i class="fa fa-fw fa-video-camera"></i>
+            <span> Videos </span>
+          </a>
+        </li>
+
+        <li *ngIf="mypermission == 'SystemAdmin'">
+          <a href="javascript:void(0)" class="nav-link" routerLink="user-management" routerLinkActive="active">
+            <i class="fa fa-fw fa-user"></i>
+            <span> User management </span>
+          </a>
+        </li>
+
+        <li class="nav-item dropdown" ngbDropdown>
+          <a href="javascript:void(0)" class="nav-link" ngbDropdownToggle>
+            <i class="fa fa-cogs"></i> <span> Options </span><b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" [routerLink]="['/logout']" (click)="onLoggedout()"><i class="fa fa-fw fa-power-off"></i> Log Out</a></li>
+          </ul>
+        </li>
+      </ul>
+
+    </div>
+  </nav>
+</div>
