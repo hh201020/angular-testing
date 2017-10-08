@@ -15,13 +15,11 @@ export class DialogServiceComponent implements OnInit {
   ) {}
 
   public ngOnInit() {
-    this.title = 'tt';
-    this.message = 'mm';
   }
 
   openD() {
-    this.dialogService.openDialog('trtrtr', 'mnmnmn');
-
-    //document.getElementById("dialogButton").click();
+    this.title = 'Input Title';
+    this.message = 'Input Message';
+    this.dialogService.openDialog(this.title, this.message);
   }
 }
