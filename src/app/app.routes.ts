@@ -12,6 +12,7 @@ export const ROUTES: Routes = [
   { path: 'detail', loadChildren: './+detail#DetailModule'},
   { path: 'barrel', loadChildren: './+barrel#BarrelModule'},
   { path: 'cmsevents', loadChildren: './cmsevent/cmsevent.module#CMSEventModule' },
+  { path: 'dialoghidden', loadChildren: './dialoghidden/dialoghidden.module#DialogHiddenModule' },
   { path: 'dialogservice', loadChildren: './dialogservice/dialogservice.module#DialogServiceModule' },
   { path: '**',    component: NoContentComponent },
 ];
