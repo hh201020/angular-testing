@@ -9,6 +9,7 @@ export const ROUTES: Routes = [
   { path: '',      component: HomeComponent },
   { path: 'home',  component: HomeComponent },
   { path: 'about', component: AboutComponent },
+  { path: 'excel', loadChildren: './excel/excel.module#ExcelModule' },
   { path: 'detail', loadChildren: './detail#DetailModule'},
   { path: 'barrel', loadChildren: './barrel#BarrelModule'},
   { path: 'cmsevents', loadChildren: './cmsevent/cmsevent.module#CMSEventModule' },
