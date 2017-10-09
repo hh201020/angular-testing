@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 // containers
 import { ExcelComponent } from './excel.component';
@@ -11,6 +12,7 @@ export const ROUTES: Routes = [
 
 @NgModule({
   imports: [
+    CommonModule,
     RouterModule.forChild(ROUTES)
   ],
   declarations: [
